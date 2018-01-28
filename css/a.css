@@ -1,0 +1,175 @@
+.choiceAfter {
+    position: relative;
+    padding: 2px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 20px;
+    width: 300px;
+    height: 30px;
+    top:-100px;
+    margin: 10px;
+    background-color: aquamarine;
+}
+.choiceAfter:hover {
+    opacity: 0.7;
+    background-color: gold;
+}
+body{
+    padding-top: 10px;
+    display: block;
+}
+.question{
+    margin-top: -20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    border-top-color:forestgreen;
+    border-bottom-color: cyan;
+    font-size: 20px;
+    height: 100px;
+    background-color: orange;
+    overflow-wrap: break-word;
+}
+.bg{
+    background-color: blanchedalmond;
+    width: 400px;
+}
+.bg-in{
+    padding: 30px;
+    height: 500px;
+}
+#start{
+    position: relative;
+
+    font-size: 30px;
+    width: 200px;
+    top: -10px;
+    
+}
+#howtoplay{
+    position: relative;
+    width: 200px;
+    font-size: 30px;
+    top: 10px;
+}
+.button{
+    border: 5px solid #2FCE9E;
+    background-color: lime;
+    border-radius: 50px;
+    cursor: pointer
+}
+#about{
+    position: relative;
+    width: 200px;
+    font-size: 30px;
+    top: 30px;
+}
+#menu{
+    position: relative;
+    width: 200px;
+    font-size: 30px;
+    top: 280px;
+}
+.button:hover{
+    transition: 0.3;
+    background-color: red
+}
+#questionType1{
+    position: relative;
+    width:200px;
+    top: -10px;
+    font-size: 30px;
+}
+
+#questionType2{
+    position: relative;
+    width:200px;
+    top:10px;
+    font-size: 30px;
+}
+#back{
+    position: relative;
+    width:200px;
+    top:30px;
+    font-size: 30px;
+}
+.score{
+    border-color: darkkhaki;
+    border-style: dotted;
+    border-width: 10px;
+    position: fixed;
+    width:250px;
+    top:150px;
+    height: 150px;
+    margin-left: 50px;
+    font-size: 25px;
+    background-color: chartreuse;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.textBoard{
+    border-style:dotted; 
+    position: relative;
+    padding: 20px;
+    top:-170px;
+    width: 300px;
+    height: 200px;
+    font-size: 25px;
+    margin-left: 30px;
+    overflow-wrap: break-word;
+    background-color:goldenrod;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#closeHowToplay{
+    position: relative;
+    top:-380px;
+    margin-left: 300px;
+    
+}
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.7);
+        
+      }
+      50% {
+        transform: scale(1);
+        
+      }
+      100% {
+        transform: scale(0.7);
+      }
+  }
+.count{
+    position: relative;
+    top:-130px;
+    margin-left: -300px;
+    font-size: 50px;
+    animation: bounceIn 3s infinite;
+    text-shadow: 2px 2px 5px red;
+}    
+#image{
+    margin-top: 0px;
+    margin-left: 10px;
+}
+.picture{
+    position: relative;
+    top:10px;
+    content: url('');
+    width: 200px;
+    height: 200px;
+    
+}
+.time{
+    position: relative;
+    top:-120px;
+    margin-left: -300px;
+    font-size: 30px;
+
+}

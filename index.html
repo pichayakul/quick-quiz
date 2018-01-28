@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <link href="./css/a.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+    <center>
+        <div class="bg">
+            <div class="bg-in">
+                <div id="name" style="font-size: 60px;margin-top: -10px;">QUICK QUIZ</div>
+                <div id="question" ></div>
+                <div id="image" ></div>
+                <div id="start" class="button">Start</div>
+                <div id="howtoplay" class="button">How to play</div>
+                <div id="about" class="button">About</div>
+                <div id="menu"></div>
+                <div id="total"></div>
+                <div id="questionType1"></div>
+                <div id="questionType2"></div>
+                <div id="back" class="back"></div>
+                <div id="textHowToplay"></div>
+                <div id="closeHowToplay"></div>
+                <div id="time"></div>
+                <div class="count"></div>
+                <div id="choice1" class="choice"></div>
+                <div id="choice2" class="choice"></div>
+                <div id="choice3" class="choice"></div>
+                <div id="choice4" class="choice"></div>
+                
+            </div>
+        </div>
+    </center>
+    <script src="jquery-3.3.1.min.js" charset="utf-8"></script>
+    
+    <script>
+        var numQuestion=[];
+        var randomNum;
+        var maxRound;
+        var arrayQuestion;
+        var ready=false;
+        var loopTime;
+        var totalTime=0;
+        var countTotalTime=0;
+        var score=0;
+        var correctQ=0;
+        var point=100;
+        function getRandomInt(max) {
+            let rand = Math.floor(Math.random() * Math.floor(max));
+            while (numQuestion.includes(rand)){
+                rand = Math.floor(Math.random() * Math.floor(max));
+                console.log(rand);
+            }
+             return rand;
+        }
+        function countSumTime(){
+            countTotalTime = setInterval(function() {
+                totalTime++;
+                }, 1000);
+        }
+        function countdown() {
+            $('.count').html('10')
+            console.log(ready);
+            if (ready==true){
+            let n = $('.count').html() - 1;
+            loopTime = setInterval(function() {
+                if (n >= 0) { $('.count').html(n--);point-=10;
+                }
+                else {
+                    console.log('TimeOut')
+                    clearInterval(loopTime);
+                    checkQuestionAndNext();
+                }
+                }, 1000);
+                
+            }
+            if (ready==false){
+                clearInterval(loopTime);
+                $('.count').html('10')
+                ready=true;
+                countdown();   
+            }
+        }
+        function stopCountDown() {
+                clearInterval(loopTime);
+                $('.count').html('')
+        }
+        
+        function hideQuestion(){
+            $('#choice1').animate({
+                width:'0px'
+            },200);
+            $('#choice2').animate({
+                width:'0px'
+            },200);
+            $('#choice3').animate({
+                width:'0px'
+            },200);
+            $('#choice4').animate({
+                width:'0px'
+            },200);
+        }
+        function changeQuestion(){
+            $('#question').html(arrayQuestion[randomNum]['question'])
+            $('#choice1').html(arrayQuestion[randomNum]['choiceA']);
+            $('#choice2').html(arrayQuestion[randomNum]['choiceB']);
+            $('#choice3').html(arrayQuestion[randomNum]['choiceC']);
+            $('#choice4').html(arrayQuestion[randomNum]['choiceD']);
+            console.log(arrayQuestion[randomNum]['img'])
+            $('#image').css('content','url(' +arrayQuestion[randomNum]['img']+ ')');
+            
+        }
+        function showQuestion(){
+            $('#choice1').animate({
+                width:'300px'
+            },100);
+            $('#choice2').animate({
+                width:'300px'
+            },100);
+            $('#choice3').animate({
+                width:'300px'
+            },100);
+            $('#choice4').animate({
+                width:'300px'
+            },100);
+        }
+        function endGame(){
+            $('#question').hide()
+            $('#choice1').hide()
+            $('#choice2').hide()
+            $('#choice3').hide()
+            $('#choice4').hide()
+            $('#image').removeClass('picture');
+            $('#image').hide()
+            // $('#image').css('content','url(' +arrayQuestion[randomNum]['img']+ ')');
+            $('#time').removeClass('time');
+            $('#time').html('');
+            stopCountDown();
+        }
+        function displayPageMain()
+        {
+            $('#name').show(500);
+            $('#start').show(500);
+            $("#howtoplay").show(500);
+            $("#about").show(500);
+        }
+        function hidePageMain()
+        {
+            $('#name').show(500);
+            $('#start').hide(500);
+            $("#howtoplay").hide(500);
+            $("#about").hide(500);
+        }
+        $(document).ready(function(){
+            $.ajax({                
+                url: 'question.json',
+                method: 'GET',
+                dataType:'json',
+                success: function(response){
+                    
+                    console.log(response);
+                    arrayQuestion=response;
+                } 
+            });
+        });
+        $('#howtoplay').click(function(){
+
+            $('#textHowToplay').html('Read the question and choose the correct answer before time out.') 
+            textBoardAddClose();
+        });
+        $("#start").click(function() {
+            hidePageMain();
+            $('#questionType1').show(500);
+            $("#questionType2").show(500);
+            $("#back").show(500);
+            $("#questionType1").html('10 Question');
+            $("#questionType1").addClass('button');
+            $("#questionType2").html('20 Question');
+            $("#questionType2").addClass('button');
+            $("#back").html('Back')
+            $("#back").addClass('button');
+        });
+        $('#back').click(function(){
+            $('#back').hide(500);
+            $('#questionType1').hide(500,);
+            $('#questionType2').hide(500);
+            displayPageMain();
+        });
+        $('#closeHowToplay').click(function(){
+            $('.textBoard').hide();
+            $('#closeHowToplay').hide();
+            
+        });
+        $('#about').click(function(){
+            $('#textHowToplay').html('Created by 5810450903 sec200')
+            textBoardAddClose();
+        });
+        function textBoardAddClose()
+        {
+            $('#textHowToplay').show();
+            $('#textHowToplay').addClass('textBoard');
+            $('#closeHowToplay').addClass('closehowtoplay');
+            $('#closeHowToplay').addClass("glyphicon glyphicon-remove");
+            $('#closeHowToplay').addClass("w3-xxlarge");
+            $('#closeHowToplay').show();
+        }
+        function checkQuestionAndNext(){
+            hideQuestion();
+            console.log('Current Score '+score)
+            if (numQuestion.length<maxRound){
+                randomNum = getRandomInt(maxRound);
+                console.log("RandomNum : "+randomNum);
+                console.log(arrayQuestion[randomNum]);
+                numQuestion.push(randomNum);
+                changeQuestion();
+                showQuestion();
+                countdown();
+            }
+            else{
+                endGame();
+                clearInterval(countTotalTime);
+                $('#total').show(500);
+                $('#total').addClass('score');
+                $('#total').html('Correct : '+correctQ+'/'+maxRound+'<br>'+'Total time : '+totalTime+'<br>Total Score : '+score);
+                console.log('finish the game')
+                $('#menu').html('Menu')
+                $('#menu').addClass('button')
+                $('#menu').show(500);
+            }
+        }
+        function startGame(){
+            countSumTime();
+            numQuestion=[];
+            score=0;
+            correctQ=0;
+            totalTime=0;
+            $('#image').addClass('picture');
+            $('#image').show();
+            $('#time').addClass('time');
+            $('#time').html('Time');
+            $('#name').hide(500);
+            $('#back').hide(500);
+            $('#questionType1').hide(500);
+            $('#questionType2').hide(500);
+            console.log("maxRound : " +maxRound);
+            randomNum = getRandomInt(maxRound);
+            console.log("RandomNum : "+randomNum);
+            console.log(arrayQuestion[randomNum]);
+            numQuestion.push(randomNum);
+            changeQuestion();
+            $('#question').show();
+            $('#question').addClass('question');
+            $('#choice1').show();
+            $('#choice2').show();
+            $('#choice3').show();
+            $('#choice4').show();
+            showQuestion();
+            ready=true;
+            countdown();
+        }
+        $('#questionType1').click(function(){
+            maxRound=10;
+            startGame()
+            $('.choice').addClass('choiceAfter');
+            
+        });
+        $('#questionType2').click(function(){
+            maxRound=20;
+            startGame()
+            $('.choice').addClass('choiceAfter');
+            
+        });
+        $('.choice').click(function(){
+            if ($(this).html()==arrayQuestion[randomNum]['answer']){
+                correctQ+=1;
+                score+=point;
+            }
+            ready=false;
+            checkQuestionAndNext();
+            point=100;
+        });
+        $('#menu').click(function(){
+            $('#menu').hide(500);
+            $('#total').hide(500);
+            displayPageMain();
+        });
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+[
+    {
+        "question" : "ประเทศใดที่มีพลเมืองมากที่สุด",
+        "choiceA":"จีน",
+        "choiceB":"ไทย",
+        "choiceC":"ญี่ปุ่น",
+        "choiceD":"อังกฤษ",
+        "answer":"จีน",
+        "img":"./img/picture1.jpg"
+    },
+    {
+        "question" : "ประเทศใดที่มีเมืองขึ้นมากที่สุด",
+        "choiceA":"ไทย",
+        "choiceB":"อังกฤษ",
+        "choiceC":"ญี่ปุ่น",
+        "choiceD":"จีน",
+        "answer":"อังกฤษ",
+        "img":"./img/picture2.jpg"
+        
+    },
+    {
+        "question" : "ประเทศใดที่กินปลามากที่สุด",
+        "choiceA":"อังกฤษ",
+        "choiceB":"ฟิลินปินส์",
+        "choiceC":"ไทย",
+        "choiceD":"ญี่ปุ่น",
+        "answer":"ญี่ปุ่น",
+        "img":"./img/picture3.jpg"
+    },
+    {
+        "question" : "ทุกๆกี่ปีดาวศุกร์จะโคจรเข้าใกล้โลกมากที่สุด",
+        "choiceA":"10",
+        "choiceB":"9",
+        "choiceC":"8",
+        "choiceD":"7",
+        "answer":"8",
+        "img":"./img/picture4.jpg"
+    },
+    {
+        "question" : "มนุษย์มีโครงกระดูกทั้งหมดกี่ซี่",
+        "choiceA":"21",
+        "choiceB":"22",
+        "choiceC":"23",
+        "choiceD":"24",
+        "answer":"24",
+        "img":"./img/picture5.jpg"
+    },
+    {
+        "question" : "ม้าลายมีลายสีอะไร",
+        "choiceA":"ดำ",
+        "choiceB":"ขาว",
+        "choiceC":"เขียว",
+        "choiceD":"เทา",
+        "answer":"ขาว",
+        "img":"./img/picture6.jpg"
+    },
+    {
+        "question" : "อเมริกันฟุตบอลมีผู้เล่นทีมละกี่คน",
+        "choiceA":"10",
+        "choiceB":"11",
+        "choiceC":"12",
+        "choiceD":"13",
+        "answer":"11",
+        "img":"./img/picture7.jpg"
+    }
+    ,
+    {
+        "question" : "เลขของโรมัน M เท่ากับจำนวนเลขอะไร",
+        "choiceA":"100",
+        "choiceB":"1,000",
+        "choiceC":"10,000",
+        "choiceD":"100,000",
+        "answer":"1,000",
+        "img":"./img/picture8.jpg"
+    }
+    ,
+    {
+        "question" : "ร่างกายของคนมีกระดูกกี่ชิ้น",
+        "choiceA":"200",
+        "choiceB":"203",
+        "choiceC":"204",
+        "choiceD":"206",
+        "answer":"206",
+        "img":"./img/picture9.jpg"
+    }
+    ,
+    {
+        "question" : "การย่อยอาหารที่พึ่งกินเข้าไปใหม่จะใช้เวลาประมาณกี่ชั่วโมงในการย่อยจนหมด",
+        "choiceA":"6",
+        "choiceB":"8",
+        "choiceC":"10",
+        "choiceD":"12",
+        "answer":"12",
+        "img":"./img/picture10.jpg"
+    }
+    ,
+    {
+        "question" : "ตัวอักษรใดที่ไม่ได้อยู่ในตารางธาตุ",
+        "choiceA":"A",
+        "choiceB":"L",
+        "choiceC":"E",
+        "choiceD":"J",
+        "answer":"J",
+        "img":"./img/picture11.jpg"
+    }
+    ,
+    {
+        "question" : "สมองของคนเรามีส่วนที่เป็นน้ำกี่เปอร์เซ็น",
+        "choiceA":"80",
+        "choiceB":"75",
+        "choiceC":"50",
+        "choiceD":"30",
+        "answer":"80",
+        "img":"./img/picture12.jpg"
+    }
+    ,
+    {
+        "question" : "สิ่งใดเป็นสารละลาย",
+        "choiceA":"น้ำแป้ง",
+        "choiceB":"โยเกิร์ต",
+        "choiceC":"นม",
+        "choiceD":"น้ำอัดลม",
+        "answer":"น้ำอัดลม",
+        "img":"./img/picture13.jpg"
+    }
+    ,
+    {
+        "question" : "อาหารกระป๋องที่สมบูรณ์เก็บไว้ได้นานเท่าไหร่",
+        "choiceA":"5 เดือน",
+        "choiceB":"10 เดือน",
+        "choiceC":"1 ปี",
+        "choiceD":"2 ปี",
+        "answer":"1 ปี",
+        "img":"./img/picture14.jpg"
+    }
+    ,
+    {
+        "question" : "คำว่า 'อินเดียน อิ้งด์' เป็นหมึกจากประเทศใด",
+        "choiceA":"จีน",
+        "choiceB":"อินเดีย",
+        "choiceC":"อังกฤษ",
+        "choiceD":"อเมริกา",
+        "answer":"จีน",
+        "img":"./img/picture15.jpg"
+    }
+    ,
+    {
+        "question" : "เคจีบี. เป็นหน่วยสืบราชการลับของประเทศใด",
+        "choiceA":"ญี่ปุ่น",
+        "choiceB":"อเมริกา",
+        "choiceC":"อังกฤษ",
+        "choiceD":"รัสเซีย",
+        "answer":"รัสเซีย",
+        "img":"./img/picture16.jpg"
+    }
+    ,
+    {
+        "question" : "ร่างกายของคนประกอบด้วยน้ำกี่เปอร์เซ็นของน้ำหนัก",
+        "choiceA":"30",
+        "choiceB":"50",
+        "choiceC":"60",
+        "choiceD":"70",
+        "answer":"70",
+        "img":"./img/picture17.jpg"
+    }
+    ,
+    {
+        "question" : "การวิ่งแข่งทางไกลมาราธอนวิ่งกันกี่ไมล์",
+        "choiceA":"20",
+        "choiceB":"26",
+        "choiceC":"30",
+        "choiceD":"34",
+        "answer":"26",
+        "img":"./img/picture18.jpg"
+    }
+    ,
+    {
+        "question" : "เวลาใดที่เรียกว่า 'ย้ำรุ่ง'",
+        "choiceA":"ตี 3",
+        "choiceB":"ตี 4",
+        "choiceC":"ตี 4",
+        "choiceD":"6 โมงเช้า",
+        "answer":"6 โมงเช้า",
+        "img":"./img/picture19.jpg"
+    }
+    ,
+    {
+        "question" : "คู่สีในข้อใดที่มีผลต่อการมองมากที่สุด",
+        "choiceA":"เหลือง-ดำ",
+        "choiceB":"แดง-ขาว",
+        "choiceC":"ขาว-ดำ",
+        "choiceD":"ส้ม-เหลือง",
+        "answer":"เหลือง-ดำ",
+        "img":"./img/picture20.jpg"
+    }
+    
+]
